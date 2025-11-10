@@ -2,12 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                echo 'Récupération du code source depuis GitHub...'
-                git 'https://github.com/Azizjuniorr/simple-web-front'
-            }
-        }
+       stage('Checkout Code') {
+  steps {
+    git branch: 'master',
+        credentialsId: 'github-creds',
+        url: 'https://github.com/Azizjuniorr/simple-web-front.git'
+  }
+}
+
 
         stage('Verify Files') {
             steps {
