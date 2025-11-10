@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo 'Récupération du code source depuis GitHub...'
-                git 'https://github.com/username/simple-web-front.git'
+                git 'https://github.com/Azizjuniorr/simple-web-front'
             }
         }
 
